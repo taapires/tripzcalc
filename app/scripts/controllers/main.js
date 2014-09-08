@@ -8,13 +8,7 @@
  * Controller of the tripzcalcApp
  */
 
- var testparam = {
-   name: 'Telmo',
-   idade: 28
 
- };
-
- 
 angular.module('tripzcalcApp')
   .controller('MainCtrl', function ($scope) {
     // $scope.awesomeThings = [
@@ -22,5 +16,27 @@ angular.module('tripzcalcApp')
     //   'AngularJS',
     //   'Karma'
     // ];
-    this.test = testparam;
+    $scope.props = [
+    {
+      icon: 'fa-car',
+      placeholder: 'Total Km'
+    },
+    {
+      icon: 'fa-area-chart',
+      placeholder: 'Média L/100'
+    },
+    {
+      icon: 'fa-money',
+      placeholder: 'Preço Gota'
+    },
+    {
+      icon: 'fa-tag',
+      placeholder: 'Portagens'
+    },
+    {
+      icon: 'fa-users',
+      placeholder: 'Número de pessoas'
+    }
+    ];
+
   });
