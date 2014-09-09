@@ -19,23 +19,23 @@ angular.module('tripzcalcApp')
     $scope.props = [
     {
       icon: 'fa-car',
-      placeholder: 'Total Km'
+      placeholder: 'Km Traveled'
     },
     {
       icon: 'fa-area-chart',
-      placeholder: 'Média L/100'
+      placeholder: 'Average L/100'
     },
     {
       icon: 'fa-money',
-      placeholder: 'Preço Gota'
+      placeholder: 'Fuel Price'
     },
     {
       icon: 'fa-tag',
-      placeholder: 'Portagens'
+      placeholder: 'Tolls'
     },
     {
       icon: 'fa-users',
-      placeholder: 'Número de pessoas'
+      placeholder: 'How many people'
     }
     ];
 
