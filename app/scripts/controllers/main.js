@@ -10,44 +10,73 @@
 
 
 angular.module('tripzcalcApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('MainCtrl', function($scope) {
     // $scope.awesomeThings = [
     //   'HTML5 Boilerplate',
     //   'AngularJS',
     //   'Karma'
     // ];
-    $scope.props = [
-    {
-      model: '',
+    $scope.items = [{
+      value: '',
       icon: 'fa-car',
       placeholder: 'Km Traveled'
-    },
-    {
-      model: '',
+    }, {
+      value: '',
       icon: 'fa-area-chart',
       placeholder: 'Average L/100'
-    },
-    {
-      model: '',
+    }, {
+      value: '',
       icon: 'fa-money',
       placeholder: 'Fuel Price'
-    },
-    {
-      model: '',
+    }, {
+      value: '',
       icon: 'fa-tag',
       placeholder: 'Tolls'
-    },
-    {
-      model: '',
+    }, {
+      value: '',
       icon: 'fa-users',
       placeholder: 'How many people'
-    }
-    ];
-    
+    }];
+
+    $scope.showResult = false;
+
     $scope.calc = function() {
-      $scope.total = parseInt($scope.props[0].model) + parseInt($scope.props[1].model);
+      var x1 = (parseInt($scope.items[0].value) * parseInt($scope.items[1].value)) / 100;
+      var x2 = (x1 * parseInt($scope.items[2].value)) + parseInt($scope.items[3].value);
+      var x3 = x2 / parseInt($scope.items[4].value);
+      $scope.total = Math.round(x3 * 100) / 100;
+
+      $scope.showResult = true;
     };
-    
+
+    $scope.calculate = function() {
+      var x1 = (parseInt($scope.kmtraveled) * parseInt($scope.average)) / 100;
+      var x2 = (x1 * parseInt($scope.fuelprice)) + parseInt($scope.tolls);
+      var x3 = x2 / parseInt($scope.persons);
+      $scope.total = Math.round(x3 * 100) / 100;
+
+      $scope.showResult = true;
+    };
+
+    // function to clean the fields
+    $scope.cleanInput = function() {
+      $scope.kmtraveled = '';
+      $scope.average = '';
+      $scope.fuelprice = '';
+      $scope.tolls = '';
+      $scope.persons = '';
+      $scope.userForm.$setPristine();
+    };
+
+  		// function to submit the form after all validation has occurred
+		$scope.submitForm = function(isValid) {
+
+			// check to make sure the form is completely valid
+			if (isValid) {
+				alert('our form is amazing');
+			}
+
+		};
 
 
   });

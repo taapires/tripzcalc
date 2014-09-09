@@ -1,21 +1,83 @@
 <div class="container" ng-controller="MainCtrl as main">
   <div class="row">
     <div class="col-md-1"></div>
-
-    <div class="col-xs-6 col-md-2 text-center" ng-repeat="prop in props">
+    <form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
+      <!--<div class="col-xs-6 col-md-2 text-center" ng-repeat="prop in items">
       <i class="fa {{prop.icon}} fa-5x"></i>
       <p></p>
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="{{prop.placeholder}}" ng-model="prop.model">
+        <input type="number" name="value" class="form-control" placeholder="{{prop.placeholder}}" ng-model="prop.value" ng-minlength="1" ng-maxlength="5" required>
+        <p ng-show="userForm.value.$invalid && !userForm.value.$pristine" class="help-block">You name is required.</p>
       </div>
-    </div>
+    </div>-->
+      <div class="col-xs-6 col-md-2 text-center">
+        <i class="fa fa-car fa-5x"></i>
+        <p></p>
+        <div class="input-group" ng-class="{ 'has-error' : userForm.kmtraveled.$invalid && !userForm.kmtraveled.$pristine }">
+          <input type="number" name="kmtraveled" class="form-control" placeholder="Km Traveled" ng-model="kmtraveled" ng-minlength="1" ng-maxlength="5" required>
+          <p ng-show="userForm.kmtraveled.$invalid && !userForm.kmtraveled.$pristine" class="help-block">Invalid input!</p>
+          <!--<p ng-show="userForm.kmtraveled.$error.minlength" class="help-block">Whoah! What a trip! /NOT!</p>-->
+          <!--<p ng-show="userForm.kmtraveled.$error.maxlength" class="help-block">Are you kidding me? :)</p>-->
+        </div>
+      </div>
 
+      <div class="col-xs-6 col-md-2 text-center">
+        <i class="fa fa-area-chart fa-5x"></i>
+        <p></p>
+        <div class="input-group" ng-class="{ 'has-error' : userForm.average.$invalid && !userForm.average.$pristine }">
+          <input type="number" name="average" class="form-control" placeholder="Average L/100" ng-model="average" ng-minlength="1" ng-maxlength="2" required>
+          <p ng-show="userForm.average.$invalid && !userForm.average.$pristine" class="help-block">invalid average!</p>
+          <!--<p ng-show="userForm.average.$error.minlength" class="help-block">humm...</p>-->
+          <!--<p ng-show="userForm.average.$error.maxlength" class="help-block">achas que isso é media?</p>-->
+        </div>
+      </div>
+
+      <div class="col-xs-6 col-md-2 text-center">
+        <i class="fa fa-money fa-5x"></i>
+        <p></p>
+        <div class="input-group" ng-class="{ 'has-error' : userForm.fuelprice.$invalid && !userForm.fuelprice.$pristine }">
+          <input type="number" name="fuelprice" class="form-control" placeholder="Fuel Price" ng-model="fuelprice" ng-minlength="1" ng-maxlength="2" required>
+          <p ng-show="userForm.fuelprice.$invalid && !userForm.fuelprice.$pristine" class="help-block">that's a price?</p>
+          <!--<p ng-show="userForm.fuelprice.$error.minlength" class="help-block">hummm...</p>-->
+          <!--<p ng-show="userForm.fuelprice.$error.maxlength" class="help-block">lol, o'really?</p>-->
+        </div>
+      </div>
+
+      <div class="col-xs-6 col-md-2 text-center">
+        <i class="fa fa-tag fa-5x"></i>
+        <p></p>
+        <div class="input-group" ng-class="{ 'has-error' : userForm.tolls.$invalid && !userForm.tolls.$pristine }">
+          <input type="number" name="tolls" class="form-control" placeholder="Tolls" ng-model="tolls" ng-minlength="1" ng-maxlength="2">
+          <p ng-show="userForm.tolls.$invalid && !userForm.tolls.$pristine" class="help-block">no tolls?</p>
+          <!--<p ng-show="userForm.tolls.$error.minlength" class="help-block">lol</p>-->
+          <!--<p ng-show="userForm.tolls.$error.maxlength" class="help-block">whoa</p>-->
+        </div>
+      </div>
+
+      <div class="col-xs-6 col-md-2 text-center">
+        <i class="fa fa-users fa-5x"></i>
+        <p></p>
+        <div class="input-group" ng-class="{ 'has-error' : userForm.persons.$invalid && !userForm.persons.$pristine }">
+          <input type="number" name="persons" class="form-control" placeholder="Number of ppl" ng-model="persons" ng-minlength="1" ng-maxlength="1" required>
+          <p ng-show="userForm.persons.$invalid && !userForm.persons.$pristine" class="help-block">invalid input</p>
+          <!--<p ng-show="userForm.persons.$error.minlength" class="help-block">don't you have friends?</p>-->
+          <!--<p ng-show="userForm.persons.$error.maxlength" class="help-block">{{persons}} persons on a car?!</p>-->
+        </div>
+      </div>
+
+    </form>
     <div class="col-md-1"></div>
   </div>
-  <p ng-model="total">{{total}}</p>
+
   <div class="row">
-    <div class="col-md-12 btn-calcular">
-      <button ng-click="calc()" type="submit" class="btn btn-primary btn-lg center-block"><i class="fa fa-calculator fa-fw"></i> How much to pay? :(</button>
+    <div class="col-md-4"></div>
+    <div class="col-xs-6 col-md-2 btn-calcular">
+      <button ng-click="calculate()" type="submit" class="btn btn-primary btn-block" ng-disabled="userForm.$invalid"><i class="fa fa-calculator fa-fw"></i> How much to pay? :(</button>
     </div>
+    <div class="col-xs-6 col-md-2 btn-calcular">
+      <button ng-click="cleanInput()" type="submit" class="btn btn-danger btn-block"><i class="fa fa-eraser fa-fw"></i> Clean</button>
+    </div>
+    <div class="col-md-4"></div>
   </div>
+  <h1 class="text-center" ng-show="showResult">Deves {{total}} €urinhos! :D</h1>
 </div>
