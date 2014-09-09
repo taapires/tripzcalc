@@ -18,7 +18,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 300px;
+  height: 320px;
   h1 {
     font-family: 'Lobster', cursive;
   }
@@ -28,6 +28,13 @@ body {
   font-family: 'Open Sans', sans-serif;
   letter-spacing: 1px;
   color: white;
+}
+
+.bottom-jumbo {
+  margin-top: 30px;
+  h1 {
+    background-color: rgba(255, 255, 255, 0.70);
+  }
 }
 
 .btn-calcular {
@@ -47,12 +54,6 @@ body {
   }
 }
 
-.bottom-jumbo {
-  margin-top: 30px;
-  h1 {
-    background-color: rgba(255, 255, 255, 0.70);
-  }
-}
 
 /* Sticky footer styles
 -------------------------------------------------- */
