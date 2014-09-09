@@ -6,16 +6,16 @@
       <i class="fa {{prop.icon}} fa-5x"></i>
       <p></p>
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="{{prop.placeholder}}">
+        <input type="text" class="form-control" placeholder="{{prop.placeholder}}" ng-model="prop.model">
       </div>
     </div>
 
     <div class="col-md-1"></div>
   </div>
-
+  <p ng-model="total">{{total}}</p>
   <div class="row">
     <div class="col-md-12 btn-calcular">
-      <button type="submit" class="btn btn-primary btn-lg center-block"><i class="fa fa-calculator fa-fw"></i> Calcular</button>
+      <button ng-click="calc()" type="submit" class="btn btn-primary btn-lg center-block"><i class="fa fa-calculator fa-fw"></i> How much to pay? :(</button>
     </div>
   </div>
 </div>

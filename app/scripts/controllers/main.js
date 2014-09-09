@@ -18,25 +18,36 @@ angular.module('tripzcalcApp')
     // ];
     $scope.props = [
     {
+      model: '',
       icon: 'fa-car',
       placeholder: 'Km Traveled'
     },
     {
+      model: '',
       icon: 'fa-area-chart',
       placeholder: 'Average L/100'
     },
     {
+      model: '',
       icon: 'fa-money',
       placeholder: 'Fuel Price'
     },
     {
+      model: '',
       icon: 'fa-tag',
       placeholder: 'Tolls'
     },
     {
+      model: '',
       icon: 'fa-users',
       placeholder: 'How many people'
     }
     ];
+    
+    $scope.calc = function() {
+      $scope.total = parseInt($scope.props[0].model) + parseInt($scope.props[1].model);
+    };
+    
+
 
   });
