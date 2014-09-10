@@ -7,6 +7,36 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
 @import url(https://fonts.googleapis.com/css?family=Roboto:500);
 
+/* when hiding the picture */
+.ng-hide-add {
+  animation: 1s hinge ease !important;
+  //   -webkit-animation-duration: 1s;
+  // -moz-animation-duration: 1s;
+  // -ms-animation-duration: 1s;
+  // -o-animation-duration: 1s;
+  // animation-duration: 1s;
+  // -webkit-animation-fill-mode: both;
+  // -moz-animation-fill-mode: both;
+  // -ms-animation-fill-mode: both;
+  // -o-animation-fill-mode: both;
+  // animation-fill-mode: both;
+}
+
+/* when showing the picture */
+.ng-hide-remove {
+  animation: 1s fadeInDown ease !important;
+  //   -webkit-animation-duration: 1s;
+  // -moz-animation-duration: 1s;
+  // -ms-animation-duration: 1s;
+  // -o-animation-duration: 1s;
+  // animation-duration: 1s;
+  // -webkit-animation-fill-mode: both;
+  // -moz-animation-fill-mode: both;
+  // -ms-animation-fill-mode: both;
+  // -o-animation-fill-mode: both;
+  // animation-fill-mode: both;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   //letter-spacing: 1px;
