@@ -35,6 +35,7 @@ angular.module('tripzcalcApp')
     }];
 
     $scope.showResult = false;
+    $scope.total = 0;
 
     // $scope.calc = function() {
     //   var x1 = (parseInt($scope.items[0].value) * parseInt($scope.items[1].value)) / 100;
@@ -51,7 +52,7 @@ angular.module('tripzcalcApp')
       var x2 = (x1 * parseInt($scope.fuelprice)) + parseInt($scope.tolls);
       var x3 = x2 / parseInt($scope.persons);
       
-      $scope.total = Math.round(x3 * 100) / 100;
+      this.total = Math.round(x3 * 100) / 100;
 
       $scope.showResult = true;
     };

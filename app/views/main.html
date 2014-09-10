@@ -1,4 +1,4 @@
-<div class="container" ng-controller="MainCtrl as main">
+<div class="container">
   <div class="row">
     <div class="col-md-1"></div>
     <form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
@@ -79,5 +79,10 @@
     </div>
     <div class="col-md-4"></div>
   </div>
-  <h1 class="text-center" ng-show="showResult">Deves {{total}} €urinhos! :D</h1>
 </div>
+
+  <div class="jumbotron bottom-jumbo">
+    <div class="container">
+      <h1 class="text-center" ng-show="showResult">{{total}} to pay! :O</h1>
+    </div>
+  </div>
