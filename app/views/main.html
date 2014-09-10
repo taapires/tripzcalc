@@ -25,7 +25,7 @@
         <i class="fa fa-area-chart fa-5x"></i>
         <p></p>
         <div class="input-group" ng-class="{ 'has-error' : userForm.average.$invalid && !userForm.average.$pristine }">
-          <input type="number" name="average" class="form-control" placeholder="Average L/100" ng-model="average" ng-minlength="1" ng-maxlength="2" required>
+          <input type="number" name="average" class="form-control" placeholder="Average L/100" ng-model="average" ng-minlength="1" ng-maxlength="3" required>
           <p ng-show="userForm.average.$invalid && !userForm.average.$pristine" class="help-block">invalid average!</p>
           <!--<p ng-show="userForm.average.$error.minlength" class="help-block">humm...</p>-->
           <!--<p ng-show="userForm.average.$error.maxlength" class="help-block">achas que isso é media?</p>-->
@@ -36,7 +36,7 @@
         <i class="fa fa-money fa-5x"></i>
         <p></p>
         <div class="input-group" ng-class="{ 'has-error' : userForm.fuelprice.$invalid && !userForm.fuelprice.$pristine }">
-          <input type="number" name="fuelprice" class="form-control" placeholder="Fuel Price" ng-model="fuelprice" ng-minlength="1" ng-maxlength="2" required>
+          <input type="number" name="fuelprice" class="form-control" placeholder="Fuel Price" ng-model="fuelprice" ng-minlength="1" ng-maxlength="4" required>
           <p ng-show="userForm.fuelprice.$invalid && !userForm.fuelprice.$pristine" class="help-block">that's a price?</p>
           <!--<p ng-show="userForm.fuelprice.$error.minlength" class="help-block">hummm...</p>-->
           <!--<p ng-show="userForm.fuelprice.$error.maxlength" class="help-block">lol, o'really?</p>-->
@@ -58,7 +58,7 @@
         <i class="fa fa-users fa-5x"></i>
         <p></p>
         <div class="input-group" ng-class="{ 'has-error' : userForm.persons.$invalid && !userForm.persons.$pristine }">
-          <input type="number" name="persons" class="form-control" placeholder="Number of ppl" ng-model="persons" ng-minlength="1" ng-maxlength="1" required>
+          <input type="number" name="persons" class="form-control" placeholder="Number of ppl" ng-model="persons" ng-minlength="1" ng-maxlength="2" required>
           <p ng-show="userForm.persons.$invalid && !userForm.persons.$pristine" class="help-block">invalid input</p>
           <!--<p ng-show="userForm.persons.$error.minlength" class="help-block">don't you have friends?</p>-->
           <!--<p ng-show="userForm.persons.$error.maxlength" class="help-block">{{persons}} persons on a car?!</p>-->
