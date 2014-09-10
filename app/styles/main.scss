@@ -1,7 +1,7 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
-// bower:scss
+// bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
-// endbower
+// endbower
 
 @import url(https://fonts.googleapis.com/css?family=Lobster);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
@@ -15,121 +15,99 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   transition: all $duration ease-in-out;
 
 }
-
 /* when hiding the picture */
-.ng-hide-add {
+h1.ng-hide-add {
   animation: 1s hinge ease !important;
-  //   -webkit-animation-duration: 1s;
-  // -moz-animation-duration: 1s;
-  // -ms-animation-duration: 1s;
-  // -o-animation-duration: 1s;
-  // animation-duration: 1s;
-  // -webkit-animation-fill-mode: both;
-  // -moz-animation-fill-mode: both;
-  // -ms-animation-fill-mode: both;
-  // -o-animation-fill-mode: both;
-  // animation-fill-mode: both;
+
 }
 
 /* when showing the picture */
-.ng-hide-remove {
+h1.ng-hide-remove {
   animation: 1s fadeInDown ease !important;
-  //   -webkit-animation-duration: 1s;
-  // -moz-animation-duration: 1s;
-  // -ms-animation-duration: 1s;
-  // -o-animation-duration: 1s;
-  // animation-duration: 1s;
-  // -webkit-animation-fill-mode: both;
-  // -moz-animation-fill-mode: both;
-  // -ms-animation-fill-mode: both;
-  // -o-animation-fill-mode: both;
-  // animation-fill-mode: both;
-}
 
+}
 body {
+  //letter-spacing: 1px;
   font-family: 'Roboto', sans-serif;
-  //letter-spacing: 1px;
-}
 
+}
 .jumbotron {
-  background: url(../images/background.png) no-repeat center center fixed;
-  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  -webkit-background-size: cover;
+  background: url("../images/background.png") no-repeat center center fixed;
   background-size: cover;
   height: 320px;
 
 }
-
 .header-jumbo {
   h1 {
     font-family: 'Lobster', cursive;
-    text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.21);
+    text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.20);
   }
+
 }
-
-
 .bottom-jumbo {
   margin-top: 30px;
   h1 {
-    background-color: rgba(255, 255, 255, 0.50);
+    background-color: rgba(255, 255, 255, 0.65);
+    margin          : 0 auto;
+    max-width       : 50%;
+    padding         : 17px;
   }
-}
 
+}
 .btn-calcular {
   margin-top: 30px;
-}
 
+}
 .fa-5x {
-  font-size: 7em;
   color: rgb(66, 66, 66);
+  font-size: 7em;
   margin-top: 30px;
-}
 
+}
 .col-md-2 {
-  @include default-transition;
-  opacity: 0.75;
   &:hover {
-    @include default-transition;
     opacity: 1;
+    @include default-transition;
   }
-}
+  opacity: 0.75;
+  @include default-transition;
 
+}
 /* Align input group
 ---------------------- */
 .input-group {
   margin: 0 auto;
+
 }
-
-
 .help-block {
   font-size: 10px;
-}
 
+}
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  position: relative;
   min-height: 100%;
+  position: relative;
 }
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
 }
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
   /* Set the fixed height of the footer here */
-  height: 60px;
   background-color: #f5f5f5;
+  bottom: 0;
+  height: 60px;
+  position: absolute;
+  width: 100%;
+
 }
-
-
 /* Custom page CSS
 -------------------------------------------------- */
 /* Not required for template or sticky footer method. */
-
 
 .container .text-muted {
   margin: 20px 0;
