@@ -22,7 +22,7 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-  <!-- Add your site or application content here -->
+  <!-- header -->
   <div class="jumbotron header-jumbo">
     <div class="container text-center">
       <h1>Tripz Calculator</h1>
@@ -30,19 +30,27 @@
       <h4 style="max-width: 685px; margin-top: 30px;" class=center-block>Often when we go on holiday with friends, it's a stress to divide the costs among all... With Tripz Calculator it just has never been so easy to split expenses!</h4>
     </div>
   </div>
+  <!-- end header -->
+  
+  <!-- main view -->
   <div ng-view="main"></div>
+  <!-- end main view -->
+  
+  <!-- footer -->
   <div class="jumbotron bottom-jumbo" ng-controller="MainCtrl as main">
     <div class="container">
-      <h1 class="text-center">Deves 10€urinhos! :D</h1>
+      <h1 class="text-center">10€ to pay! :O</h1>
     </div>
   </div>
 
+  <!-- footer -->
   <div class="footer">
     <div class="container">
       <p class="text-muted">&copy; tripz calculator<span class="pull-right"><i class="fa fa-code"></i> with <i class="fa fa-heart"></i> by elpirez</span>
       </p>
     </div>
   </div>
+  <!-- end footer -->
 
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->

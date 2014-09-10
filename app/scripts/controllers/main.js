@@ -11,11 +11,7 @@
 
 angular.module('tripzcalcApp')
   .controller('MainCtrl', function($scope) {
-    // $scope.awesomeThings = [
-    //   'HTML5 Boilerplate',
-    //   'AngularJS',
-    //   'Karma'
-    // ];
+
     $scope.items = [{
       value: '',
       icon: 'fa-car',
@@ -40,19 +36,21 @@ angular.module('tripzcalcApp')
 
     $scope.showResult = false;
 
-    $scope.calc = function() {
-      var x1 = (parseInt($scope.items[0].value) * parseInt($scope.items[1].value)) / 100;
-      var x2 = (x1 * parseInt($scope.items[2].value)) + parseInt($scope.items[3].value);
-      var x3 = x2 / parseInt($scope.items[4].value);
-      $scope.total = Math.round(x3 * 100) / 100;
+    // $scope.calc = function() {
+    //   var x1 = (parseInt($scope.items[0].value) * parseInt($scope.items[1].value)) / 100;
+    //   var x2 = (x1 * parseInt($scope.items[2].value)) + parseInt($scope.items[3].value);
+    //   var x3 = x2 / parseInt($scope.items[4].value);
+    //   $scope.total = Math.round(x3 * 100) / 100;
 
-      $scope.showResult = true;
-    };
-
+    //   $scope.showResult = true;
+    // };
+    
+    // function to calculate the total to pay
     $scope.calculate = function() {
       var x1 = (parseInt($scope.kmtraveled) * parseInt($scope.average)) / 100;
       var x2 = (x1 * parseInt($scope.fuelprice)) + parseInt($scope.tolls);
       var x3 = x2 / parseInt($scope.persons);
+      
       $scope.total = Math.round(x3 * 100) / 100;
 
       $scope.showResult = true;
@@ -71,15 +69,15 @@ angular.module('tripzcalcApp')
       $scope.showResult = false;
     };
 
-  		// function to submit the form after all validation has occurred
-		$scope.submitForm = function(isValid) {
+  // 		// function to submit the form after all validation has occurred
+		// $scope.submitForm = function(isValid) {
 
-			// check to make sure the form is completely valid
-			if (isValid) {
-				alert('our form is amazing');
-			}
+		// 	// check to make sure the form is completely valid
+		// 	if (isValid) {
+		// 		alert('our form is amazing');
+		// 	}
 
-		};
+		// };
 
 
   });
