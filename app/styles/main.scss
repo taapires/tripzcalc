@@ -7,6 +7,15 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
 @import url(https://fonts.googleapis.com/css?family=Roboto:500);
 
+@mixin default-transition($duration: 0.3s) {
+  -moz-transition: all $duration ease-in-out;
+  -ms-transition: all $duration ease-in-out;
+  -o-transition: all $duration ease-in-out;
+  -webkit-transition: all $duration ease-in-out;
+  transition: all $duration ease-in-out;
+
+}
+
 /* when hiding the picture */
 .ng-hide-add {
   animation: 1s hinge ease !important;
@@ -78,8 +87,10 @@ body {
 }
 
 .col-md-2 {
+  @include default-transition;
   opacity: 0.75;
   &:hover {
+    @include default-transition;
     opacity: 1;
   }
 }
