@@ -66,6 +66,9 @@ angular.module('tripzcalcApp')
       $scope.tolls = '';
       $scope.persons = '';
       $scope.userForm.$setPristine();
+      
+      // hide the result if shown
+      $scope.showResult = false;
     };
 
   		// function to submit the form after all validation has occurred
